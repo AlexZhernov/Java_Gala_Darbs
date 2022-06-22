@@ -31,4 +31,6 @@ public interface IEmployeeService {
 
 	Employee findEmployeeByNameAndSurnameAndDepartment(String name, String surname, int id);
 
+	Employee findById(int id);
+
 }

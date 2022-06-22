@@ -76,6 +76,11 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 	
 	@Override
+	public Employee findById(int id) {
+		return employeerepo.findById(id).get();
+	}
+	
+	@Override
 	public ArrayList<Employee> findEmployeesByName(String Name){
 		return (ArrayList<Employee>)employeerepo.findAllByName(Name);
 	}
