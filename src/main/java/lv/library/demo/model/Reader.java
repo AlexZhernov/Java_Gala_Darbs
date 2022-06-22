@@ -21,10 +21,10 @@ import lombok.ToString;
 @Entity
 public class Reader {
 	@Column(name = "Name")
-	private String Name;
+	private String name;
 	
 	@Column(name = "Surname")
-	private String Surname;
+	private String surname;
 	
 	@Column(name = "User Number")
 	@Id
@@ -38,24 +38,24 @@ public class Reader {
 	
 	public Reader(String name, String surname) {
 		super();
-		Name = name;
-		Surname = surname;
+		setName(name);
+		setSurname(surname);
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public String getSurname() {
-		return Surname;
+		return surname;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public void setSurname(String surname) {
-		Surname = surname;
+		this.surname = surname;
 	}
 
 	public void setHistory(Book book) {

@@ -25,7 +25,7 @@ public class LibraryDepartment {
 	private int departid;
 	
 	@Column(name = "Department Name")
-	private String Name;
+	private String name;
 	
 	@Column(name = "Working Times")
 	private String workintimes;
@@ -40,12 +40,12 @@ public class LibraryDepartment {
 	
 	public LibraryDepartment(String name, String workintimes) {
 		super();
-		Name = name;
-		this.workintimes = workintimes;
+		setName(name);
+		setWorkintimes(workintimes);
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public String getWorkintimes() {
@@ -53,7 +53,7 @@ public class LibraryDepartment {
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public void setWorkintimes(String workintimes) {

@@ -47,11 +47,11 @@ public class Employee {
 	}
 
 	public void setName(String name) {
-		name = name;
+		this.name = name;
 	}
 
 	public void setSurname(String surname) {
-		surname = surname;
+		this.surname = surname;
 	}
 	
 	public void setDepartment(LibraryDepartment department) {
