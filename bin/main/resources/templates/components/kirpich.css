@@ -1,0 +1,13 @@
+.kirpich-container {
+  display: flex;
+  position: relative;
+}
+.kirpich-text {
+  font-size: 3em;
+  align-self: center;
+  margin-top: var(--dl-space-space-threeunits);
+  text-align: center;
+  font-family: Lobster;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}

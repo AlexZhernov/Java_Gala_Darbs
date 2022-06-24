@@ -2,7 +2,9 @@
 
 <html lang="en">
   <head>
-    <title>Add reader - Kindly Crafty Monkey</title>
+    <title>Reader all - Kindly Crafty Monkey</title>
+    <meta property="og:title" content="Reader all - Kindly Crafty Monkey" />
+    <meta property="og:title" content="Book single - Kindly Crafty Monkey" />
     <meta property="og:title" content="Add reader - Kindly Crafty Monkey" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,60 +33,41 @@
     </style>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"
       data-tag="font"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div>
-      <link href="./addreader.css" rel="stylesheet" />
+      <link href="./readerall.css" rel="stylesheet" />
 
-      <div class="addreader-container">
-        <div class="addreader-container1">
-          <div class="addreader-container2">
-            <button class="addreader-button button">To Homepage</button>
-            <div class="addreader-container3">
-              <h1 class="addreader-text">Kirpich Library</h1>
-            </div>
+      <div class="readerall-container">
+        <div class="readerall-container1">
+        <form action="#" class="form" th:action = "@{/home}" method="post">
+           <button type="submit" name = "action" value = "home" th:formation="'/home'"> To Homepage </button>
+          <div class="readerall-container2">
+            <h1 class="readerall-text">Kirpich Library</h1>
           </div>
-          <div class="addreader-container4">
-            <span class="addreader-text1">Surname:</span>
-            <div class="app-component-container app-component-root-class-name1">
-              <input
-                type="text"
-                placeholder="placeholder"
-                name="ReaderName"
-                class="app-component-textinput input"
-              />
-            </div>
-          </div>
-          <button name="SubmitReader" class="addreader-button1 button">
-            Submit
-          </button>
-          <span class="addreader-text2">
-            <span class="addreader-text3">Add new user:</span>
-          </span>
-          <div class="component1-container component1-root-class-name">
-            <span class="component1-text">
-              <span class="component1-text1">Name</span>
-              <span>:</span>
-            </span>
-            <div class="app-component-container app-component-root-class-name">
-              <input
-                type="text"
-                placeholder="placeholder"
-                name="ReaderName"
-                class="app-component-textinput input"
-              />
-            </div>
-          </div>
+        </form>
         </div>
+	<table> 
+		<tr>
+			<th>User Number</th>
+    		<th>Name</th>
+    		<th>Surname</th>
+    	</tr>
+		 <tr th:each="reader : ${package}">
+			 <td th:text="${reader.getId()}"> </td>
+			<td th:text="${reader.getName()}"> </td>
+			<td th:text="${reader.getSurname()}"> </td>
+		</tr>
+	</table>
       </div>
     </div>
   </body>

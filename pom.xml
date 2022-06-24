@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Java_KD2_A_15</artifactId>
+	<artifactId>Java_Gala_Darbs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Java_KD2_A_15</name>
+	<name>Java_Gala_Darbs</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -25,8 +25,7 @@
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
-		    <version>2.7.0</version>
-		</dependency>
+		    </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
