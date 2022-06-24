@@ -52,6 +52,11 @@ public class ReaderServiceImpl implements IReaderService{
 	}
 	
 	@Override
+	public ArrayList<Reader> getAllReader(){
+		return (ArrayList<Reader>)readerepo.findAll();
+	}
+	
+	@Override
 	public void addHistory(Reader reader, Book book) {
 		reader.addBook(book);
 		readerepo.save(reader);

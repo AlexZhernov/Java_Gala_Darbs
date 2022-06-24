@@ -25,4 +25,6 @@ public interface IReaderService {
 
 	Reader findByBookTitle(String title);
 
+	ArrayList<Reader> getAllReader();
+
 }
