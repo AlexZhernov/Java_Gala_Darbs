@@ -18,7 +18,9 @@ public class BasicController {
 	
 	@PostMapping("/home")
 	public String Homepage(Model model, @RequestParam(value="action", required=true) String action) {
-		if(action == "allreader") {
+		System.out.println(action);
+		if(action.equals("allreader")) {
+			System.out.println("Kas iet");
 			return "redirect:/reader/readerall";
 		}
 		return "index";

@@ -49,10 +49,12 @@
 
       <div class="readerall-container">
         <div class="readerall-container1">
-          <button class="readerall-button button">To Homepage</button>
+        <form action="#" class="form" th:action = "@{/home}" method="post">
+           <button type="submit" name = "action" value = "home" th:formation="'/home'"> To Homepage </button>
           <div class="readerall-container2">
             <h1 class="readerall-text">Kirpich Library</h1>
           </div>
+        </form>
         </div>
 	<table> 
 		<tr>
@@ -61,9 +63,9 @@
     		<th>Surname</th>
     	</tr>
 		 <tr th:each="reader : ${package}">
-			 <td th:text="${reader.id}"> </td>
-			<td th:text="${reader.name}"> </td>
-			<td th:text="${reader.surname}"> </td>
+			 <td th:text="${reader.getId()}"> </td>
+			<td th:text="${reader.getName()}"> </td>
+			<td th:text="${reader.getSurname()}"> </td>
 		</tr>
 	</table>
       </div>
