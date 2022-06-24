@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import lv.library.demo.model.Book;
 import lv.library.demo.model.Reader;
 import lv.library.demo.repo.IReaderRepo;
+import lv.library.demo.services.IBookService;
 import lv.library.demo.services.IReaderService;
 
 @Service
@@ -16,6 +17,9 @@ public class ReaderServiceImpl implements IReaderService{
 	
 	@Autowired
 	private IReaderRepo readerepo;
+	
+	@Autowired
+	private IBookService bookrepo;
 	
 	@Override
 	public Reader insertReader(String name, String Surname) {
@@ -71,5 +75,10 @@ public class ReaderServiceImpl implements IReaderService{
 	@Override
 	public Reader findById(int id) {
 		return readerepo.findById(id).get();
+	}
+	
+	@Override
+	public Reader findByBookTitle(String title) {
+		return bookrepo.findByTitle(title).getReader();
 	}
 }
